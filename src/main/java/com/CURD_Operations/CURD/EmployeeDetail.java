@@ -1,5 +1,6 @@
 package com.CURD_Operations.CURD;
 
-public interface EmployeeDetail {
-    public String getData();
-}
+ public interface EmployeeDetail {
+    public String getData() ;
+     abstract String Data();
+ }
