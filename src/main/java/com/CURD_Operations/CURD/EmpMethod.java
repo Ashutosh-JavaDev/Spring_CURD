@@ -10,10 +10,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/employee")
 public class EmpMethod {
-    @Autowired
-    private EmployeeDetail employeeDetail;
 
-
+    private final EmployeeDetail employeeDetail;
+    public EmpMethod(EmployeeDetail employeeDetail){
+        this.employeeDetail=employeeDetail;
+    }
     @GetMapping("read")
     public List<Employee> readEmployee(){
    return employeeDetail.readEmployee();
