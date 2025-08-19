@@ -1,32 +1,27 @@
 package com.CURD_Operations.CURD;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class EmpMethod implements EmployeeDetail {
+public class EmpMethod {
+    @Autowired
+    private EmployeeDetail employeeDetail;
 
-    @Override
-    public String getData(){
-        return "ok";
+
+    @GetMapping("read")
+    public List<Employee> readEmployee(){
+   return employeeDetail.readEmployee();
     }
-@Override
-public String Data() {
-        return "Done from  Interface";
+    @PostMapping("label")
+    public String CreateEmployee(@RequestBody Employee emp){
+        return employeeDetail.CreateEmployee(emp);
     }
-    List<Employee>emp=new ArrayList<>();
-    @GetMapping("Empl")
-    public List<Employee> getDetail(){
-   return emp;
-    }
-    @PostMapping("emp")
-    public String getInfo(@RequestBody Employee emps){
-        emp.add(emps);
-        return "Successfully Inserted";
+    @DeleteMapping("delete/{id}")
+    public boolean deleteData(@PathVariable Long id){
+        return employeeDetail.deleteData(id);
     }
 }
