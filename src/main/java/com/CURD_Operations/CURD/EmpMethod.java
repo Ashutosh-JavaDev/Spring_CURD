@@ -1,12 +1,14 @@
 package com.CURD_Operations.CURD;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/employee")
 public class EmpMethod {
     @Autowired
     private EmployeeDetail employeeDetail;
@@ -16,7 +18,7 @@ public class EmpMethod {
     public List<Employee> readEmployee(){
    return employeeDetail.readEmployee();
     }
-    @PostMapping("label")
+    @PostMapping("add")
     public String CreateEmployee(@RequestBody Employee emp){
         return employeeDetail.CreateEmployee(emp);
     }
