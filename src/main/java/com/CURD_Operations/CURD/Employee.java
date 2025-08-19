@@ -2,11 +2,13 @@ package com.CURD_Operations.CURD;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class EmployeeInfo {
-//    Rows of the Table;
+public class Employee {
     private Long ID;
     private String Name;
     private String Email;
-    private Long phone;
+    private Long Phone;
+
 }
