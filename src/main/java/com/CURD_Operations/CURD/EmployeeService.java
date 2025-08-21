@@ -21,7 +21,7 @@ public class EmployeeService implements EmployeeDetail {
         return employee.removeIf(e -> e.getID().equals(id));
     }
     @Override
-    public boolean updateData(Long id,Employee updatedData){
+    public Employee updateData(Long id,Employee updatedData){
     for(int i=0;i<employee.size();i++){
         if(employee.get(i).getID().equals(id)){
             employee.set(i,updatedData);

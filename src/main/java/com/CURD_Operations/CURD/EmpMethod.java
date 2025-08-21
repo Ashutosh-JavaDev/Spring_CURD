@@ -1,5 +1,6 @@
 package com.CURD_Operations.CURD;
 
+import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +27,9 @@ public class EmpMethod {
     @DeleteMapping("delete/{id}")
     public boolean deleteData(@PathVariable Long id){
         return employeeDetail.deleteData(id);
+    }
+    @PutMapping ("Update{id}")
+    public Employee updatedData(Long id,Employee updateData){
+        return employeeDetail.updateData(id,updateData);
     }
 }
