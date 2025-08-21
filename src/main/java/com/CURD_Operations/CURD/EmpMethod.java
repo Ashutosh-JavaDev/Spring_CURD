@@ -28,7 +28,7 @@ public class EmpMethod {
     public boolean deleteData(@PathVariable Long id){
         return employeeDetail.deleteData(id);
     }
-    @PutMapping ("Update{id}")
+    @PutMapping ("Update/{id}")
     public Employee updatedData(Long id,Employee updateData){
         return employeeDetail.updateData(id,updateData);
     }
