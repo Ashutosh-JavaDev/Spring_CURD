@@ -19,6 +19,9 @@ public class EmployeeService implements EmployeeDetail {
     @Override
     public boolean deleteData(Long id){
         return employee.removeIf(e -> e.getID().equals(id));
+    }
+    @Override
+    public boolean updateData(Long id){
 
     }
 }
