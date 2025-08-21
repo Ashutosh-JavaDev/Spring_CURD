@@ -12,6 +12,7 @@ public class EmpMethod {
     public EmpMethod(EmployeeDetail employeeDetail){
         this.employeeDetail=employeeDetail;
     }
+//    GetMapping
     @GetMapping("read")
     public List<Employee> readEmployee(){
    return employeeDetail.readEmployee();
