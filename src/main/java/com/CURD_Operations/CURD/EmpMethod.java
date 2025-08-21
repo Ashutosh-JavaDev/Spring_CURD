@@ -17,6 +17,7 @@ public class EmpMethod {
     public List<Employee> readEmployee(){
    return employeeDetail.readEmployee();
     }
+//    Post Mapping
     @PostMapping("add")
     public String CreateEmployee(@RequestBody Employee emp){
         return employeeDetail.CreateEmployee(emp);
