@@ -7,5 +7,5 @@ import java.util.List;
        String CreateEmployee(Employee emp);
        List<Employee>readEmployee();
        boolean deleteData(Long id);
-       boolean updateData(Long id);
+       boolean updateData(Long id,Employee updatedData);
  }
