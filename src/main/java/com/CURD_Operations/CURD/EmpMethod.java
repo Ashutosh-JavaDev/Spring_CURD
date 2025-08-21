@@ -22,6 +22,7 @@ public class EmpMethod {
     public String CreateEmployee(@RequestBody Employee emp){
         return employeeDetail.CreateEmployee(emp);
     }
+//    Delete Mapping
     @DeleteMapping("delete/{id}")
     public boolean deleteData(@PathVariable Long id){
         return employeeDetail.deleteData(id);
